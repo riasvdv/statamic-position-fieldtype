@@ -1,0 +1,6 @@
+name: 'Position Fieldtype'
+version: '1.0'
+description: 'Provide better UX by letting clients choose from position icons.'
+developer: Rias
+developer_url: 'https://rias.be'
+commercial: true
