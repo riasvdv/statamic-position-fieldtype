@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/release/rias500/statamic-position-fieldtype.svg?style=flat-square)](https://github.com/rias500/statamic-position-fieldtype/releases)
 [![Quality Score](https://img.shields.io/scrutinizer/g/rias500/statamic-position-fieldtype.svg?style=flat-square)](https://scrutinizer-ci.com/g/rias500/statamic-position-fieldtype)
-[![StyleCI](https://styleci.io/repos/181754960/shield)](https://styleci.io/repos/181754960)
+[![StyleCI](https://styleci.io/repos/181859139/shield)](https://styleci.io/repos/181859139)
 
 # Position Fieldtype plugin for Statamic
 
