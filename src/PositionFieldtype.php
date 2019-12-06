@@ -9,7 +9,7 @@ class PositionFieldtype extends Fieldtype
 {
     protected $icon = 'fieldset';
 
-    static $options = [
+    public static $options = [
         'left',
         'center',
         'right',
@@ -23,16 +23,16 @@ class PositionFieldtype extends Fieldtype
         $fields = collect(self::$options)->mapWithKeys(function (string $option) {
             return [
                 $option => [
-                    'type' => 'toggle',
+                    'type'    => 'toggle',
                     'display' => ucfirst(Str::deslugify($option)),
-                    'width' => 50,
+                    'width'   => 50,
                     'default' => true,
-                ]
+                ],
             ];
         })->toArray();
 
         $fields['default'] = [
-            'type' => 'select',
+            'type'    => 'select',
             'display' => 'Default',
             'options' => collect(self::$options)->flatMap(function (string $option) {
                 return [$option => ucfirst(Str::deslugify($option))];
