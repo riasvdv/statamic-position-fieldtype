@@ -1,0 +1,27 @@
+{
+    "name": "rias/statamic-position-fieldtype",
+    "type": "statamic-addon",
+    "autoload": {
+        "psr-4": {
+            "Rias\\PositionFieldtype\\": "src"
+        }
+    },
+    "require":  {
+        "pixelfear/composer-dist-plugin": "^0.1.0"
+    },
+    "extra": {
+        "download-dist": {
+            "url": "https://github.com/riasvdv/statamic-position-fieldtype/releases/download/{$version}/dist.tar.gz",
+            "path": "dist"
+        },
+        "statamic": {
+            "name": "Position Fieldtype",
+            "description": "Provide better UX by letting clients choose from position icons."
+        },
+        "laravel": {
+            "providers": [
+                "Rias\\PositionFieldtype\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,14 +1,12 @@
 ![Icon](icon.svg)
 
 [![Latest Version](https://img.shields.io/github/release/riasvdv/statamic-position-fieldtype.svg?style=flat-square)](https://github.com/riasvdv/statamic-position-fieldtype/releases)
-[![Quality Score](https://img.shields.io/scrutinizer/g/riasvdv/statamic-position-fieldtype.svg?style=flat-square)](https://scrutinizer-ci.com/g/riasvdv/statamic-position-fieldtype)
-[![StyleCI](https://styleci.io/repos/181859139/shield)](https://styleci.io/repos/181859139)
 
 # Position Fieldtype plugin for Statamic
 
 Provide better UX to clients by letting them pick from icons.
 
-![Screenshot](./resources/assets/img/position-fieldtype-screenshot.png)
+![Screenshot](./docs/img/position-fieldtype-screenshot.png)
 
 ## License
 
@@ -19,9 +17,19 @@ You may use Position without a license while Statamic is in [Trial mode](https:/
 
 ## Installation
 
-To install the plugin, download the plugin and place it in your `site/addons` folder.
+Require it using Composer.
 
-## Using Position
+```
+composer require rias/statamic-position-fieldtype
+```
+
+Publish the assets:
+
+```
+php artisan vendor:publish --provider="Rias\PositionFieldtype\ServiceProvider"
+```
+
+## Using the position fieldtype
 
 Add the fieldtype to your fieldset. You can choose to hide certain positions, by default they are all visible.
 
@@ -30,16 +38,18 @@ sections:
   main:
     display: Main
     fields:
-      position:
-        type: position
-        options:
+      -
+        handle: position
+        field:
+          type: position
+          display: Position
           left: true
           center: true
           right: true
           full: true
           drop-left: true
-          drop-right: true
-        default: center
+          drop-right: false
+          default: right
 ```
 
 ## Using Position
