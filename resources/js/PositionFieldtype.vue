@@ -1,5 +1,5 @@
 <template>
-    <div class="btn-group">
+    <div>
         <button
                 v-for="label in options"
                 v-if="config[label]"
